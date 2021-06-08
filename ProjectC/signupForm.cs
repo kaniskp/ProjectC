@@ -41,11 +41,10 @@ namespace ProjectC
         {
             //สร้าง user
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `login`(`username`, `password`, `email`, `phonenumber`) VALUES (@usn, @pass, @email, @pnb )", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `login`(`username`, `password`, `phonenumber`) VALUES (@usn, @pass, @pnb )", db.GetConnection());
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = userBox.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = passBox.Text;
-            command.Parameters.Add("@email", MySqlDbType.VarChar).Value = emailBox.Text;
             command.Parameters.Add("@pnb", MySqlDbType.VarChar).Value = phonenumBox.Text;
             //เปิดดาต้า
             db.openConnection();
@@ -64,6 +63,9 @@ namespace ProjectC
                             if (command.ExecuteNonQuery() == 1)
                             {
                                 MessageBox.Show("ACCOUNT CREATED", "OH MY CUP");
+                                this.Hide();
+                                loginForm form = new loginForm();
+                                form.Show();
                             }
                             else
                             {
@@ -119,12 +121,10 @@ namespace ProjectC
         {
             String user = userBox.Text;
             String pass = passBox.Text;
-            String email = emailBox.Text;
             String phonenum = phonenumBox.Text;
             
 
-            if (user.Equals("") || pass.Equals("") ||
-                email.Equals("") || phonenum.Equals(""))
+            if (user.Equals("") || pass.Equals("") || phonenum.Equals(""))
             {
                 return true;
             }
@@ -140,6 +140,14 @@ namespace ProjectC
             this.Hide();
             loginForm form = new loginForm();
             form.Show();
+        }
+
+        private void passBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && (e.KeyChar != 8))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

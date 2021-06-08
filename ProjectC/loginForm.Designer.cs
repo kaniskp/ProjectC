@@ -44,6 +44,7 @@ namespace ProjectC
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,7 +55,7 @@ namespace ProjectC
             this.userTextBox.AutoRoundedCorners = true;
             this.userTextBox.BorderRadius = 21;
             this.userTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.userTextBox.DefaultText = "kanis";
+            this.userTextBox.DefaultText = "";
             this.userTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.userTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.userTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -71,7 +72,6 @@ namespace ProjectC
             this.userTextBox.PasswordChar = '\0';
             this.userTextBox.PlaceholderText = "";
             this.userTextBox.SelectedText = "";
-            this.userTextBox.SelectionStart = 5;
             this.userTextBox.ShadowDecoration.Parent = this.userTextBox;
             this.userTextBox.Size = new System.Drawing.Size(307, 45);
             this.userTextBox.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace ProjectC
             this.passwordTextBox.AutoRoundedCorners = true;
             this.passwordTextBox.BorderRadius = 21;
             this.passwordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passwordTextBox.DefaultText = "1";
+            this.passwordTextBox.DefaultText = "";
             this.passwordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.passwordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.passwordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -131,7 +131,6 @@ namespace ProjectC
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.PlaceholderText = "";
             this.passwordTextBox.SelectedText = "";
-            this.passwordTextBox.SelectionStart = 1;
             this.passwordTextBox.ShadowDecoration.Parent = this.passwordTextBox;
             this.passwordTextBox.Size = new System.Drawing.Size(307, 45);
             this.passwordTextBox.TabIndex = 7;
@@ -226,7 +225,7 @@ namespace ProjectC
             this.loginButton.BorderRadius = 20;
             this.loginButton.CheckedState.Parent = this.loginButton;
             this.loginButton.CustomImages.Parent = this.loginButton;
-            this.loginButton.FillColor = System.Drawing.Color.Transparent;
+            this.loginButton.FillColor = System.Drawing.Color.Bisque;
             this.loginButton.Font = new System.Drawing.Font("Niagara Engraved", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.Sienna;
             this.loginButton.HoverState.Parent = this.loginButton;
@@ -274,6 +273,10 @@ namespace ProjectC
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // loginForm
             // 
@@ -327,6 +330,7 @@ namespace ProjectC
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
 

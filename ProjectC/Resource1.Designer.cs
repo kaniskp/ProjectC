@@ -103,6 +103,36 @@ namespace ProjectC {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chocolate_Banana_Waffles {
+            get {
+                object obj = ResourceManager.GetObject("Chocolate Banana Waffles", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coconut_Cake {
+            get {
+                object obj = ResourceManager.GetObject("Coconut Cake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cookie {
+            get {
+                object obj = ResourceManager.GetObject("cookie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Espresso {
             get {
                 object obj = ResourceManager.GetObject("Espresso", resourceCulture);
@@ -116,6 +146,16 @@ namespace ProjectC {
         internal static System.Drawing.Bitmap Fresh_Milk {
             get {
                 object obj = ResourceManager.GetObject("Fresh_Milk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fruit_tart {
+            get {
+                object obj = ResourceManager.GetObject("fruit tart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +203,36 @@ namespace ProjectC {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minerral_water {
+            get {
+                object obj = ResourceManager.GetObject("minerral_water", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soft_chocolate_cake {
+            get {
+                object obj = ResourceManager.GetObject("soft chocolate cake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Souffle_Cheesecake {
+            get {
+                object obj = ResourceManager.GetObject("Souffle Cheesecake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Strawberry_Cheesecake {
             get {
                 object obj = ResourceManager.GetObject("Strawberry_Cheesecake", resourceCulture);
@@ -186,6 +256,16 @@ namespace ProjectC {
         internal static System.Drawing.Bitmap Tea_With_Milk {
             get {
                 object obj = ResourceManager.GetObject("Tea_With_Milk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap water {
+            get {
+                object obj = ResourceManager.GetObject("water", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

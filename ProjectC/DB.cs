@@ -9,7 +9,7 @@ namespace ProjectC
 {
     class DB
     {
-        private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=menu");
+        private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=cafe_ohmycub");
 
         //create function to open the connection
         public void openConnection()

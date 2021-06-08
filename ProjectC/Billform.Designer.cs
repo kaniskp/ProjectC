@@ -31,6 +31,7 @@ namespace ProjectC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billform));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -45,6 +46,7 @@ namespace ProjectC
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -53,6 +55,7 @@ namespace ProjectC
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Sienna;
+            this.guna2Panel1.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.guna2CircleButton1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,6 +64,23 @@ namespace ProjectC
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(561, 54);
             this.guna2Panel1.TabIndex = 22;
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("supermarket", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.White;
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(0, 8);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
+            this.guna2DateTimePicker1.TabIndex = 45;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 7, 17, 51, 36, 230);
             // 
             // label5
             // 
@@ -71,7 +91,7 @@ namespace ProjectC
             this.label5.BackColor = System.Drawing.Color.Sienna;
             this.label5.Font = new System.Drawing.Font("Niagara Engraved", 31.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label5.Location = new System.Drawing.Point(185, 0);
+            this.label5.Location = new System.Drawing.Point(406, -2);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 56);
             this.label5.TabIndex = 39;
@@ -274,6 +294,7 @@ namespace ProjectC
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // printDocument1
             // 
@@ -290,12 +311,23 @@ namespace ProjectC
             this.guna2PictureBox1.TabIndex = 44;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Agency FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Sienna;
+            this.label4.Location = new System.Drawing.Point(166, 347);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 39);
+            this.label4.TabIndex = 45;
+            // 
             // Billform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(561, 627);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.totalButton);
             this.Controls.Add(this.changemoneyBox);
             this.Controls.Add(this.label3);
@@ -340,5 +372,7 @@ namespace ProjectC
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.Label label4;
     }
 }

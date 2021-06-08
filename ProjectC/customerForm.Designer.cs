@@ -35,8 +35,6 @@ namespace ProjectC
             this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.passTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.callTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -50,7 +48,7 @@ namespace ProjectC
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(26, 242);
+            this.label1.Location = new System.Drawing.Point(26, 228);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 32);
@@ -73,7 +71,7 @@ namespace ProjectC
             this.userTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.userTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userTextBox.HoverState.Parent = this.userTextBox;
-            this.userTextBox.Location = new System.Drawing.Point(198, 242);
+            this.userTextBox.Location = new System.Drawing.Point(198, 228);
             this.userTextBox.Name = "userTextBox";
             this.userTextBox.PasswordChar = '\0';
             this.userTextBox.PlaceholderText = "";
@@ -130,42 +128,6 @@ namespace ProjectC
             this.label2.TabIndex = 12;
             this.label2.Text = "Password :";
             // 
-            // emailTextBox
-            // 
-            this.emailTextBox.AutoRoundedCorners = true;
-            this.emailTextBox.BorderRadius = 17;
-            this.emailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.emailTextBox.DefaultText = "";
-            this.emailTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.emailTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.emailTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailTextBox.DisabledState.Parent = this.emailTextBox;
-            this.emailTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.FocusedState.Parent = this.emailTextBox;
-            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.HoverState.Parent = this.emailTextBox;
-            this.emailTextBox.Location = new System.Drawing.Point(143, 359);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.PasswordChar = '\0';
-            this.emailTextBox.PlaceholderText = "";
-            this.emailTextBox.SelectedText = "";
-            this.emailTextBox.ShadowDecoration.Parent = this.emailTextBox;
-            this.emailTextBox.Size = new System.Drawing.Size(333, 36);
-            this.emailTextBox.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Sienna;
-            this.label3.Location = new System.Drawing.Point(26, 359);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 32);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Email :";
-            // 
             // callTextBox
             // 
             this.callTextBox.AutoRoundedCorners = true;
@@ -182,7 +144,7 @@ namespace ProjectC
             this.callTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.callTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.callTextBox.HoverState.Parent = this.callTextBox;
-            this.callTextBox.Location = new System.Drawing.Point(124, 421);
+            this.callTextBox.Location = new System.Drawing.Point(130, 373);
             this.callTextBox.Name = "callTextBox";
             this.callTextBox.PasswordChar = '\0';
             this.callTextBox.PlaceholderText = "";
@@ -190,17 +152,19 @@ namespace ProjectC
             this.callTextBox.ShadowDecoration.Parent = this.callTextBox;
             this.callTextBox.Size = new System.Drawing.Size(352, 36);
             this.callTextBox.TabIndex = 17;
+            this.callTextBox.TextChanged += new System.EventHandler(this.callTextBox_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Sienna;
-            this.label4.Location = new System.Drawing.Point(20, 421);
+            this.label4.Location = new System.Drawing.Point(26, 373);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 32);
             this.label4.TabIndex = 16;
             this.label4.Text = "Call :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // guna2Button1
             // 
@@ -212,7 +176,7 @@ namespace ProjectC
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(157, 484);
+            this.guna2Button1.Location = new System.Drawing.Point(154, 441);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(196, 45);
@@ -278,13 +242,11 @@ namespace ProjectC
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(497, 635);
+            this.ClientSize = new System.Drawing.Size(497, 540);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.callTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.passTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.userTextBox);
@@ -315,8 +277,6 @@ namespace ProjectC
         private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
         private Guna.UI2.WinForms.Guna2TextBox passTextBox;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox callTextBox;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;

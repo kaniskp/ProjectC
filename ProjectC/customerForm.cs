@@ -20,7 +20,7 @@ namespace ProjectC
         }
         private MySqlConnection DatabaseConnection()
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=menu;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=cafe_ohmycub;";
 
             MySqlConnection conn = new MySqlConnection(connectionString);
 
@@ -59,7 +59,6 @@ namespace ProjectC
             {
                 userTextBox.Text = read.GetString("username");
                 passTextBox.Text = read.GetString("password");
-                emailTextBox.Text = read.GetString("email");
                 callTextBox.Text = read.GetString("phonenumber");
             }
             conn.Close();
@@ -70,11 +69,34 @@ namespace ProjectC
             MySqlConnection conn = DatabaseConnection();
 
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE `login` SET `username`='"+userTextBox.Text+ "',`password`='" + passTextBox.Text + "',`email`='" + emailTextBox.Text + "',`phonenumber`='" + callTextBox.Text + "' WHERE username = '"+Program.username+"'", conn);
+            MySqlCommand cmd = new MySqlCommand("UPDATE `login` SET `username`='"+userTextBox.Text+ "',`password`='" + passTextBox.Text + "',`phonenumber`='" + callTextBox.Text + "' WHERE username = '"+Program.username+"'", conn);
             MySqlDataReader read = cmd.ExecuteReader();
             MessageBox.Show("แก้ไขข้อมูลเรียบร้อยแล้ว", "OH MY CUP");
             conn.Close();
             Program.username = userTextBox.Text;
+            this.Hide();
+            optionForm form = new optionForm();
+            form.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void callTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ProjectC
         List<Bill> allbill = new List<Bill>();
         private MySqlConnection DatabaseConnection()
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=menu;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=cafe_ohmycub;";
 
             MySqlConnection conn = new MySqlConnection(connectionString);
 
@@ -50,6 +50,7 @@ namespace ProjectC
         public Billform()
         {
             InitializeComponent();
+            label4.Hide();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -61,10 +62,14 @@ namespace ProjectC
         private void moneyBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && (e.KeyChar != 8))
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && (e.KeyChar != 8) && (e.KeyChar != (char)Keys.Enter))
             {
                 MessageBox.Show("กรุณาใส่จำนวนเงินตัวเลข", "OH MY CUP");
                  e.Handled = true;
+            }
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                totalButton_Click(totalButton, e);
             }
             
         }
@@ -107,19 +112,38 @@ namespace ProjectC
 
         private void totalButton_Click(object sender, EventArgs e)
         {
-            {
                 if(moneyBox.Text == "")
                 {
-                    MessageBox.Show("กรุณากรอกจำนวนเงินให้เรียบร้อยด้วย อีสัส", "");
+                    MessageBox.Show("กรุณากรอกจำนวนเงินให้เรียบร้อยด้วย ", "OH MY CUB");
                 }
                 else
                 {
                     double givemoney = double.Parse(moneyBox.Text);
                     if (givemoney >= Program.sum)
                     {
+                        string date = DateTime.Now.ToString("dd / MM / yyyy");
+                        string time = DateTime.Now.ToString("h:mm tt");
+                        MySqlConnection conn = DatabaseConnection();
+                        conn.Open();
+                        MySqlCommand cmd;
+                        cmd = conn.CreateCommand();
+                        cmd.CommandText = $"SELECT * FROM sorderbuyer WHERE Name =\"{ Program.username}\"";
+                        MySqlDataReader row = cmd.ExecuteReader();
+                        if (row.HasRows)
+                        {
+                            while (row.Read())
+                            {
+                                MySqlConnection conn1 = DatabaseConnection();
+                                conn1.Open();
+                                MySqlCommand command1 = new MySqlCommand("INSERT INTO `sales_history`(`Date`,`Name`, `Menu`,`Type`,`Price`,`Time`) VALUES ('" + date + "','" + Program.username + "','" + row.GetString(2) + "','" + row.GetString(3) + "','" + row.GetString(4) + "','" + time + "')", conn1);
+                                command1.ExecuteReader();
+                                conn1.Close();
+                            }
+                        }
                         changemoneyBox.Text = Convert.ToString(givemoney - Program.sum);
                         printPreviewDialog1.Document = printDocument1;
                         printPreviewDialog1.ShowDialog();
+                        //DB db = new DB();
                         delorder1();
                         this.Hide();
                         productForm form = new productForm();
@@ -130,12 +154,7 @@ namespace ProjectC
                     {
                         MessageBox.Show("จำนวนเงินไม่พียงพอ", "OH MY CUP");
                     }
-                }
-                
-                
-                
-                
-            }  
+                } 
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -155,17 +174,20 @@ namespace ProjectC
             {
                 y = y + 35;
                 e.Graphics.DrawString("   "+number.ToString(), new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(100, y));
-                e.Graphics.DrawString("   " + i.menu, new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(190, y));
-                e.Graphics.DrawString("   " + i.type, new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(480, y));
-                e.Graphics.DrawString("   " + i.price, new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(680, y));
-                
+                e.Graphics.DrawString("   " + i.menu, new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(190, y));//icecream
+                e.Graphics.DrawString("   " + i.type, new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(480, y));//iced
+                e.Graphics.DrawString("   " + i.price, new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(680, y));//20
                 number = number + 1;
             }
             e.Graphics.DrawString("-----------------------------------------------------------------------------", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(80, y+30));
             e.Graphics.DrawString("รวมทั้งสิ้น         "+ Program.sum.ToString() + " บาท", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(570, (y + 30)+45));
-            e.Graphics.DrawString("ชื่อผู้ซื้อ        " + Program.username.ToString(), new Font("supermarket", 16, FontStyle.Bold), Brushes.Black, new Point(80, (y + 30) + 45));
+            e.Graphics.DrawString("ชื่อผู้ให้บริการ        " + Program.username.ToString(), new Font("supermarket", 16, FontStyle.Bold), Brushes.Black, new Point(80, (y + 30) + 45));
             e.Graphics.DrawString("รับเงิน            " + moneyBox.Text + " บาท", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(570, ((y + 30) + 45) +45));
             e.Graphics.DrawString("เงินทอน           " + changemoneyBox.Text + " บาท", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(570, (((y + 30) + 45) + 45) +45));
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
 
         }
     }
