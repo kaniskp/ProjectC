@@ -92,5 +92,31 @@ namespace ProjectC
             signupForm form = new signupForm();
             form.Show();
         }
+
+        private void userTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((int)e.KeyChar >= 65 && (int)e.KeyChar <= 122) || ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8 || (int)e.KeyChar == 13)
+            {
+                e.Handled = false; // OS will handle this event.
+            }
+            else
+            {
+                e.Handled = true;  // OS will not handle this event.
+                MessageBox.Show("กรุณาตรวจสอบอักขระ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void passwordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((int)e.KeyChar >= 65 && (int)e.KeyChar <= 122) || ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8 || (int)e.KeyChar == 13)
+            {
+                e.Handled = false; // OS will handle this event.
+            }
+            else
+            {
+                e.Handled = true;  // OS will not handle this event.
+                MessageBox.Show("กรุณาตรวจสอบอักขระ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

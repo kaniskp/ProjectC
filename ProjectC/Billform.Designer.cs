@@ -130,6 +130,7 @@ namespace ProjectC
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
@@ -267,6 +268,7 @@ namespace ProjectC
             // 
             // totalButton
             // 
+            this.totalButton.Animated = true;
             this.totalButton.AutoRoundedCorners = true;
             this.totalButton.BorderRadius = 21;
             this.totalButton.CheckedState.Parent = this.totalButton;

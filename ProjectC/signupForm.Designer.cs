@@ -103,6 +103,7 @@ namespace ProjectC
             this.userBox.ShadowDecoration.Parent = this.userBox;
             this.userBox.Size = new System.Drawing.Size(395, 45);
             this.userBox.TabIndex = 7;
+            this.userBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userBox_KeyPress);
             // 
             // label4
             // 
@@ -180,6 +181,7 @@ namespace ProjectC
             this.passBox2.ShadowDecoration.Parent = this.passBox2;
             this.passBox2.Size = new System.Drawing.Size(395, 45);
             this.passBox2.TabIndex = 11;
+            this.passBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passBox2_KeyPress);
             // 
             // panel2
             // 
@@ -239,6 +241,7 @@ namespace ProjectC
             this.phonenumBox.ShadowDecoration.Parent = this.phonenumBox;
             this.phonenumBox.Size = new System.Drawing.Size(395, 45);
             this.phonenumBox.TabIndex = 18;
+            this.phonenumBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phonenumBox_KeyPress);
             // 
             // guna2CircleButton2
             // 

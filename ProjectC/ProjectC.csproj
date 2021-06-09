@@ -85,6 +85,12 @@
     <Compile Include="edititemsForm.Designer.cs">
       <DependentUpon>edititemsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="historyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historyForm.Designer.cs">
+      <DependentUpon>historyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="optionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="edititemsForm.resx">
       <DependentUpon>edititemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyForm.resx">
+      <DependentUpon>historyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="optionForm.resx">
       <DependentUpon>optionForm.cs</DependentUpon>

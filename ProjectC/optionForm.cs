@@ -37,5 +37,12 @@ namespace ProjectC
             productForm form = new productForm();
             form.Show();
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            historyForm form = new historyForm();
+            form.Show();
+        }
     }
 }

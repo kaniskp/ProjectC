@@ -231,6 +231,7 @@ namespace ProjectC
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
@@ -251,6 +252,7 @@ namespace ProjectC
             // 
             // guna2Button2
             // 
+            this.guna2Button2.Animated = true;
             this.guna2Button2.AutoRoundedCorners = true;
             this.guna2Button2.BorderRadius = 21;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
@@ -271,6 +273,7 @@ namespace ProjectC
             // 
             // guna2Button3
             // 
+            this.guna2Button3.Animated = true;
             this.guna2Button3.AutoRoundedCorners = true;
             this.guna2Button3.BorderRadius = 21;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;

@@ -147,10 +147,7 @@ namespace ProjectC
                 picturemenuBox.Image = Resource1.Souffle_Cheesecake;
             }
         } 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
 
@@ -217,7 +214,7 @@ namespace ProjectC
                     string time = guna2DateTimePicker1.Value.ToString();
                     string sql = "INSERT INTO `sorderbuyer`(`Name`, `Menu`,`type`,`price`) VALUES ('" + Program.username + "','" + guna2ComboBox2.Text + "','" + guna2ComboBox1.Text + "','" + pricefromdb + "')";
                     MySqlCommand command = new MySqlCommand(sql, conn2);
-                    MessageBox.Show(sql);
+                    //MessageBox.Show(sql);
                     command.ExecuteReader();
                     conn2.Close();
                     showorder();

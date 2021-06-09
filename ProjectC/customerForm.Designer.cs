@@ -79,6 +79,7 @@ namespace ProjectC
             this.userTextBox.ShadowDecoration.Parent = this.userTextBox;
             this.userTextBox.Size = new System.Drawing.Size(278, 36);
             this.userTextBox.TabIndex = 10;
+            this.userTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userTextBox_KeyPress);
             // 
             // guna2ProgressBar1
             // 
@@ -116,6 +117,7 @@ namespace ProjectC
             this.passTextBox.ShadowDecoration.Parent = this.passTextBox;
             this.passTextBox.Size = new System.Drawing.Size(294, 36);
             this.passTextBox.TabIndex = 13;
+            this.passTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passTextBox_KeyPress);
             // 
             // label2
             // 
@@ -152,7 +154,7 @@ namespace ProjectC
             this.callTextBox.ShadowDecoration.Parent = this.callTextBox;
             this.callTextBox.Size = new System.Drawing.Size(352, 36);
             this.callTextBox.TabIndex = 17;
-            this.callTextBox.TextChanged += new System.EventHandler(this.callTextBox_TextChanged);
+            this.callTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.callTextBox_KeyPress);
             // 
             // label4
             // 
@@ -164,10 +166,10 @@ namespace ProjectC
             this.label4.Size = new System.Drawing.Size(86, 32);
             this.label4.TabIndex = 16;
             this.label4.Text = "Call :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace ProjectC
 {
@@ -36,6 +37,7 @@ namespace ProjectC
             }
 
         }
+
         
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -47,31 +49,43 @@ namespace ProjectC
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = passBox.Text;
             command.Parameters.Add("@pnb", MySqlDbType.VarChar).Value = phonenumBox.Text;
             //เปิดดาต้า
-            db.openConnection();
 
-            if (!checkTextBoxValues())
+            db.openConnection();
+            Regex r = new Regex(@"^[0-9]{10}$");
+           
+                if (!checkTextBoxValues())
             {
                 
                     if (passBox.Text.Equals(passBox2.Text))
                     {
-                        if (checkuser())
+                        if (r.IsMatch(phonenumBox.Text))
                         {
-                            MessageBox.Show("This username already has information.", "OH MY CUP");
-                        }
-                        else
-                        {
-                            if (command.ExecuteNonQuery() == 1)
+                           
+                            if (checkuser())
                             {
-                                MessageBox.Show("ACCOUNT CREATED", "OH MY CUP");
-                                this.Hide();
-                                loginForm form = new loginForm();
-                                form.Show();
+                                MessageBox.Show("This username already has information.", "OH MY CUP");
                             }
+
                             else
                             {
-                                MessageBox.Show("ERROR", "OH MY CUP");
+                                if (command.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("ACCOUNT CREATED", "OH MY CUP");
+                                    this.Hide();
+                                    loginForm form = new loginForm();
+                                    form.Show();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("ERROR", "OH MY CUP");
+                                }
                             }
+                        }  
+                        else
+                        {
+                            MessageBox.Show("กรุณากรอกเบอร์โทรให้ถูกต้อง ", "OH MY CUP");
                         }
+
                     }
                     else
                     {
@@ -87,8 +101,6 @@ namespace ProjectC
             //ปิด ดาต้า
             db.closeConnection();
         }
-
-        
         public Boolean checkuser()
         {
             DB db = new DB();
@@ -144,7 +156,47 @@ namespace ProjectC
 
         private void passBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && (e.KeyChar != 8))
+            if (((int)e.KeyChar >= 65 && (int)e.KeyChar <= 122) || ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8 || (int)e.KeyChar == 13)
+            {
+                e.Handled = false; 
+            }
+            else
+            {
+                e.Handled = true;  
+                MessageBox.Show("กรุณาตรวจสอบอักขระ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void userBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((int)e.KeyChar >= 65 && (int)e.KeyChar <= 122) || ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8 || (int)e.KeyChar == 13)
+            {
+                e.Handled = false; 
+            }
+            else
+            {
+                e.Handled = true;  
+                MessageBox.Show("กรุณาตรวจสอบอักขระ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void passBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((int)e.KeyChar >= 65 && (int)e.KeyChar <= 122) || ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8 || (int)e.KeyChar == 13)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("กรุณาตรวจสอบอักขระ", "ผลการตรวจสอบ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        
+
+        private void phonenumBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
