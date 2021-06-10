@@ -181,7 +181,7 @@ namespace ProjectC
             }
             e.Graphics.DrawString("-----------------------------------------------------------------------------", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(80, y+30));
             e.Graphics.DrawString("รวมทั้งสิ้น         "+ Program.sum.ToString() + " บาท", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(570, (y + 30)+45));
-            e.Graphics.DrawString("ชื่อผู้ให้บริการ        " + Program.username.ToString(), new Font("supermarket", 16, FontStyle.Bold), Brushes.Black, new Point(80, (y + 30) + 45));
+            e.Graphics.DrawString("service provider        " + Program.username.ToString(), new Font("supermarket", 16, FontStyle.Bold), Brushes.Black, new Point(80, (y + 30) + 45));
             e.Graphics.DrawString("รับเงิน            " + moneyBox.Text + " บาท", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(570, ((y + 30) + 45) +45));
             e.Graphics.DrawString("เงินทอน           " + changemoneyBox.Text + " บาท", new Font("supermarket", 16, FontStyle.Regular), Brushes.Black, new Point(570, (((y + 30) + 45) + 45) +45));
         }

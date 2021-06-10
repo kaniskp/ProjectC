@@ -83,7 +83,7 @@ namespace ProjectC
                         }  
                         else
                         {
-                            MessageBox.Show("กรุณากรอกเบอร์โทรให้ถูกต้อง ", "OH MY CUP");
+                            MessageBox.Show("กรุณากรอกเบอร์โทรให้ถูกต้องอีกรั้ง ", "OH MY CUP");
                         }
 
                     }

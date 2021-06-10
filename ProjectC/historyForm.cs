@@ -25,9 +25,11 @@ namespace ProjectC
         {
             InitializeComponent();
         }
-
+        int total = 0;
         private void historyForm_Load(object sender, EventArgs e)
         {
+            guna2DateTimePicker1.Value = System.DateTime.Now;
+            guna2DateTimePicker2.Value = System.DateTime.Now;
             MySqlConnection conn = DatabaseConnection();
             DataSet ds = new DataSet();
             conn.Open();
@@ -47,5 +49,34 @@ namespace ProjectC
             optionForm form = new optionForm();
             form.Show();
         }
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DatabaseConnection();
+
+            DataSet ds = new DataSet();
+
+            conn.Open();
+            MySqlCommand cmd;
+
+            cmd = conn.CreateCommand();
+            cmd.CommandText = $"SELECT * FROM sales_history WHERE Date between @date1 and @date2 ";
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            adapter.SelectCommand.Parameters.AddWithValue("@date1", guna2DateTimePicker1.Value.ToString("dd / MM / yyyy"));
+            adapter.SelectCommand.Parameters.AddWithValue("@date2", guna2DateTimePicker2.Value.ToString("dd / MM / yyyy"));
+            adapter.Fill(ds);
+            conn.Close();
+            dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            total = 0; //ตัวแปรยอดรวมจำนวนเงิน
+            conn.Open();
+            MySqlDataReader read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                total = total + int.Parse(read.GetString(5));
+            }
+            TotalTextBox.Text = $"{total}";
+            conn.Close();
+        }
+
     }
 }

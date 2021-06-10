@@ -30,12 +30,12 @@ namespace ProjectC
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(productForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.Backbutton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -44,7 +44,7 @@ namespace ProjectC
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.OrderButton = new Guna.UI2.WinForms.Guna2Button();
             this.picturemenuBox = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -74,13 +74,12 @@ namespace ProjectC
             this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.Controls.Add(this.guna2DateTimePicker1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.guna2CircleButton1);
+            this.panel1.Controls.Add(this.Backbutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1043, 59);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2DateTimePicker1
             // 
@@ -99,26 +98,26 @@ namespace ProjectC
             this.guna2DateTimePicker1.TabIndex = 6;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 7, 17, 51, 36, 230);
             // 
-            // guna2CircleButton1
+            // Backbutton
             // 
-            this.guna2CircleButton1.Animated = true;
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.BackgroundImage")));
-            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(984, -5);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(59, 68);
-            this.guna2CircleButton1.TabIndex = 5;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            this.Backbutton.Animated = true;
+            this.Backbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Backbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Backbutton.BackgroundImage")));
+            this.Backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Backbutton.CheckedState.Parent = this.Backbutton;
+            this.Backbutton.CustomImages.Parent = this.Backbutton;
+            this.Backbutton.FillColor = System.Drawing.Color.Transparent;
+            this.Backbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Backbutton.ForeColor = System.Drawing.Color.White;
+            this.Backbutton.HoverState.Parent = this.Backbutton;
+            this.Backbutton.Location = new System.Drawing.Point(984, -5);
+            this.Backbutton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Backbutton.ShadowDecoration.Parent = this.Backbutton;
+            this.Backbutton.Size = new System.Drawing.Size(59, 68);
+            this.Backbutton.TabIndex = 5;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
             // 
             // guna2ComboBox2
             // 
@@ -173,11 +172,11 @@ namespace ProjectC
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Silver;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -186,11 +185,11 @@ namespace ProjectC
             this.dataGridView1.Location = new System.Drawing.Point(342, 398);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(636, 151);
             this.dataGridView1.TabIndex = 24;
@@ -220,7 +219,6 @@ namespace ProjectC
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(276, 36);
             this.guna2ComboBox1.TabIndex = 25;
-            this.guna2ComboBox1.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // guna2Button3
             // 
@@ -241,7 +239,7 @@ namespace ProjectC
             this.guna2Button3.Size = new System.Drawing.Size(170, 62);
             this.guna2Button3.TabIndex = 27;
             this.guna2Button3.Text = "Check Bill";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.guna2Button3.Click += new System.EventHandler(this.CheckbillButton_Click);
             // 
             // guna2CircleButton2
             // 
@@ -262,28 +260,28 @@ namespace ProjectC
             this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
             this.guna2CircleButton2.Size = new System.Drawing.Size(54, 43);
             this.guna2CircleButton2.TabIndex = 6;
-            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
+            this.guna2CircleButton2.Click += new System.EventHandler(this.optionButton_Click);
             // 
-            // guna2Button1
+            // OrderButton
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 23;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.Bisque;
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Sienna;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2Button1.Location = new System.Drawing.Point(749, 256);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 49);
-            this.guna2Button1.TabIndex = 21;
-            this.guna2Button1.Text = "Order";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.OrderButton.Animated = true;
+            this.OrderButton.AutoRoundedCorners = true;
+            this.OrderButton.BorderRadius = 23;
+            this.OrderButton.CheckedState.Parent = this.OrderButton;
+            this.OrderButton.CustomImages.Parent = this.OrderButton;
+            this.OrderButton.FillColor = System.Drawing.Color.Bisque;
+            this.OrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderButton.ForeColor = System.Drawing.Color.Sienna;
+            this.OrderButton.HoverState.Parent = this.OrderButton;
+            this.OrderButton.Image = ((System.Drawing.Image)(resources.GetObject("OrderButton.Image")));
+            this.OrderButton.ImageSize = new System.Drawing.Size(50, 50);
+            this.OrderButton.Location = new System.Drawing.Point(759, 259);
+            this.OrderButton.Name = "OrderButton";
+            this.OrderButton.ShadowDecoration.Parent = this.OrderButton;
+            this.OrderButton.Size = new System.Drawing.Size(180, 49);
+            this.OrderButton.TabIndex = 21;
+            this.OrderButton.Text = "Order";
+            this.OrderButton.Click += new System.EventHandler(this.Orderbutton_Click);
             // 
             // picturemenuBox
             // 
@@ -362,7 +360,7 @@ namespace ProjectC
             this.guna2Button4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2Button4.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.guna2Button4.UseTransparentBackground = true;
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.guna2Button4.Click += new System.EventHandler(this.CofButton_Click);
             // 
             // guna2Button5
             // 
@@ -387,7 +385,7 @@ namespace ProjectC
             this.guna2Button5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2Button5.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.guna2Button5.UseTransparentBackground = true;
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.guna2Button5.Click += new System.EventHandler(this.TeaButton_Click);
             // 
             // guna2Button6
             // 
@@ -412,7 +410,7 @@ namespace ProjectC
             this.guna2Button6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2Button6.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.guna2Button6.UseTransparentBackground = true;
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            this.guna2Button6.Click += new System.EventHandler(this.MilkButton_Click);
             // 
             // guna2Button7
             // 
@@ -437,7 +435,7 @@ namespace ProjectC
             this.guna2Button7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2Button7.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.guna2Button7.UseTransparentBackground = true;
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            this.guna2Button7.Click += new System.EventHandler(this.watButton_Click);
             // 
             // guna2Button8
             // 
@@ -462,7 +460,7 @@ namespace ProjectC
             this.guna2Button8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2Button8.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.guna2Button8.UseTransparentBackground = true;
-            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
+            this.guna2Button8.Click += new System.EventHandler(this.DessButton_Click);
             // 
             // guna2Button2
             // 
@@ -483,7 +481,7 @@ namespace ProjectC
             this.guna2Button2.Size = new System.Drawing.Size(168, 62);
             this.guna2Button2.TabIndex = 26;
             this.guna2Button2.Text = "Delete Order";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.guna2Button2.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // productForm
             // 
@@ -496,7 +494,7 @@ namespace ProjectC
             this.Controls.Add(this.guna2CircleButton2);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.OrderButton);
             this.Controls.Add(this.picturemenuBox);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -529,7 +527,7 @@ namespace ProjectC
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton Backbutton;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private System.Windows.Forms.Panel panel7;
@@ -537,7 +535,7 @@ namespace ProjectC
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox picturemenuBox;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button OrderButton;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;

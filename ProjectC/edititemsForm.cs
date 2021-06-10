@@ -241,11 +241,6 @@ namespace ProjectC
                 textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells["Iced"].FormattedValue.ToString();
                 textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells["Freppe"].FormattedValue.ToString();
             }
-            //dataGridView1.CurrentRow.Selected = true;
-            //textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["Namemenu"].FormattedValue.ToString();
-            //textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["Hot"].FormattedValue.ToString();
-            //textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells["Iced"].FormattedValue.ToString();
-            //textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells["Freppe"].FormattedValue.ToString();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)

@@ -47,18 +47,6 @@ namespace ProjectC
             conn.Close();
             dataGridView1.DataSource = ds.Tables[0].DefaultView;
         }
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-            DialogResult result= MessageBox.Show("ต้องการออกจากระบบใช่หรือไม่","OH MY CUP",MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
-            {
-                this.Hide();
-                loginForm form = new loginForm();
-                form.Show();
-            }
-            
-        }
-
         private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (guna2ComboBox2.Text == "Espresso (เอสเพรสโซ่)")
@@ -148,31 +136,24 @@ namespace ProjectC
             }
         } 
         
-
-       
-
-        private void guna2CircleButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            optionForm form = new optionForm();
-            form.Show();
-        }
-
         private void productForm_Load(object sender, EventArgs e)
         {
             showorder();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Backbutton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Billform form = new Billform();
-            form.Show();
+            DialogResult result = MessageBox.Show("ต้องการออกจากระบบใช่หรือไม่", "OH MY CUP", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                loginForm form = new loginForm();
+                form.Show();
+            }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void Orderbutton_Click(object sender, EventArgs e)
         {
-            //ดึงข้อมูล
             if (whenclickdessert == false && guna2ComboBox1.Text == "dessert")
             {
                 MessageBox.Show("ประเภทอาหารนี้ สำหรับเมนู Dessert เท่านั้น");
@@ -220,23 +201,9 @@ namespace ProjectC
                     showorder();
                 }
             }
-            //
-            
-            
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             int selectedRow = dataGridView1.CurrentCell.RowIndex;
             int deletorder = Convert.ToInt32(dataGridView1.Rows[selectedRow].Cells["No"].Value);
@@ -248,19 +215,26 @@ namespace ProjectC
             conn.Close();
             if (rows > 0)
             {
-                MessageBox.Show("ลบรายการที่สั่งเรียบร้อยแล้ว","OH MY CUP");
+                MessageBox.Show("ลบรายการที่สั่งเรียบร้อยแล้ว", "OH MY CUP");
                 showorder();
             }
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void CheckbillButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Billform form = new Billform();
             form.Show();
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void optionButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            optionForm form = new optionForm();
+            form.Show();
+        }
+
+        private void CofButton_Click(object sender, EventArgs e)
         {
             guna2ComboBox1.Enabled = true;
             guna2ComboBox1.Text = "";
@@ -284,7 +258,7 @@ namespace ProjectC
             whenclickdessert = false;
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
+        private void TeaButton_Click(object sender, EventArgs e)
         {
             guna2ComboBox1.Enabled = true;
             guna2ComboBox1.Text = "";
@@ -307,7 +281,7 @@ namespace ProjectC
             whenclickdessert = false;
         }
 
-        private void guna2Button6_Click(object sender, EventArgs e)
+        private void MilkButton_Click(object sender, EventArgs e)
         {
             guna2ComboBox1.Enabled = true;
             guna2ComboBox1.Text = "";
@@ -331,7 +305,7 @@ namespace ProjectC
             whenclickdessert = false;
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
+        private void watButton_Click(object sender, EventArgs e)
         {
             guna2ComboBox1.Text = "Iced";
             guna2ComboBox1.Enabled = false;
@@ -352,12 +326,10 @@ namespace ProjectC
             guna2ComboBox2.DataSource = ds.Tables["water"];
             guna2ComboBox2.DisplayMember = "Namemenu";
             whenclickdessert = false;
-            //guna2ComboBox1.SelectedIndex = 0;
         }
 
-        private void guna2Button8_Click(object sender, EventArgs e)
+        private void DessButton_Click(object sender, EventArgs e)
         {
-            whenclickdessert = true;
             guna2ComboBox1.Enabled = false;
             Program.outputDB = "dessert";
             label1.Text = "DESSERT";
@@ -375,11 +347,8 @@ namespace ProjectC
             conn.Close();
             guna2ComboBox2.DataSource = ds.Tables["dessert"];
             guna2ComboBox2.DisplayMember = "Namemenu";
-            
-            
             guna2ComboBox1.Text = "dessert";
-
-
+            whenclickdessert = true;
         }
     }
 }
