@@ -31,6 +31,7 @@ namespace ProjectC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(historyForm));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,11 @@ namespace ProjectC
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.searchtxtbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -58,17 +63,38 @@ namespace ProjectC
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(946, 57);
+            this.guna2Panel1.Size = new System.Drawing.Size(1043, 57);
             this.guna2Panel1.TabIndex = 22;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.BackgroundImage")));
+            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(986, 0);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(54, 57);
+            this.guna2CircleButton1.TabIndex = 2;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(268, 215);
+            this.dataGridView1.Location = new System.Drawing.Point(266, 328);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(662, 269);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 232);
             this.dataGridView1.TabIndex = 3;
             // 
             // guna2DateTimePicker1
@@ -81,12 +107,12 @@ namespace ProjectC
             this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.SaddleBrown;
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(268, 167);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(442, 225);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(230, 36);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(173, 36);
             this.guna2DateTimePicker1.TabIndex = 25;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 10, 0, 0, 0, 0);
             // 
@@ -117,7 +143,7 @@ namespace ProjectC
             this.TotalTextBox.Font = new System.Drawing.Font("supermarket", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TotalTextBox.HoverState.Parent = this.TotalTextBox;
-            this.TotalTextBox.Location = new System.Drawing.Point(404, 507);
+            this.TotalTextBox.Location = new System.Drawing.Point(462, 275);
             this.TotalTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.PasswordChar = '\0';
@@ -133,7 +159,7 @@ namespace ProjectC
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("supermarket", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.Color.Sienna;
-            this.label2.Location = new System.Drawing.Point(265, 487);
+            this.label2.Location = new System.Drawing.Point(326, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 74);
             this.label2.TabIndex = 40;
@@ -149,12 +175,12 @@ namespace ProjectC
             this.guna2DateTimePicker2.ForeColor = System.Drawing.Color.SaddleBrown;
             this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(549, 167);
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(695, 225);
             this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
             this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(230, 36);
+            this.guna2DateTimePicker2.Size = new System.Drawing.Size(173, 36);
             this.guna2DateTimePicker2.TabIndex = 41;
             this.guna2DateTimePicker2.Value = new System.DateTime(2021, 6, 10, 0, 0, 0, 0);
             // 
@@ -171,7 +197,7 @@ namespace ProjectC
             this.SearchButton.HoverState.Parent = this.SearchButton;
             this.SearchButton.Image = ((System.Drawing.Image)(resources.GetObject("SearchButton.Image")));
             this.SearchButton.ImageSize = new System.Drawing.Size(30, 30);
-            this.SearchButton.Location = new System.Drawing.Point(785, 162);
+            this.SearchButton.Location = new System.Drawing.Point(875, 169);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.ShadowDecoration.Parent = this.SearchButton;
             this.SearchButton.Size = new System.Drawing.Size(145, 47);
@@ -245,35 +271,87 @@ namespace ProjectC
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2CircleButton1
+            // searchtxtbox
             // 
-            this.guna2CircleButton1.Animated = true;
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.BackgroundImage")));
-            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(889, 0);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(54, 57);
-            this.guna2CircleButton1.TabIndex = 2;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            this.searchtxtbox.AutoRoundedCorners = true;
+            this.searchtxtbox.BorderRadius = 20;
+            this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchtxtbox.DefaultText = "";
+            this.searchtxtbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchtxtbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchtxtbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchtxtbox.DisabledState.Parent = this.searchtxtbox;
+            this.searchtxtbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchtxtbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchtxtbox.FocusedState.Parent = this.searchtxtbox;
+            this.searchtxtbox.Font = new System.Drawing.Font("supermarket", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchtxtbox.HoverState.Parent = this.searchtxtbox;
+            this.searchtxtbox.Location = new System.Drawing.Point(285, 169);
+            this.searchtxtbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchtxtbox.Name = "searchtxtbox";
+            this.searchtxtbox.PasswordChar = '\0';
+            this.searchtxtbox.PlaceholderText = "";
+            this.searchtxtbox.SelectedText = "";
+            this.searchtxtbox.ShadowDecoration.Parent = this.searchtxtbox;
+            this.searchtxtbox.Size = new System.Drawing.Size(583, 43);
+            this.searchtxtbox.TabIndex = 42;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("supermarket", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
+            this.label3.Location = new System.Drawing.Point(640, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 74);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "-";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 22;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(723, 275);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(145, 47);
+            this.guna2Button1.TabIndex = 44;
+            this.guna2Button1.Text = "Print ";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // historyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(946, 572);
+            this.ClientSize = new System.Drawing.Size(1043, 572);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.guna2DateTimePicker2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.SearchButton);
@@ -282,6 +360,8 @@ namespace ProjectC
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "historyForm";
             this.Text = "historyForm";
@@ -311,5 +391,10 @@ namespace ProjectC
         private Guna.UI2.WinForms.Guna2TextBox TotalTextBox;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2TextBox searchtxtbox;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -24,6 +24,8 @@ namespace ProjectC
         public static string menu;
         public static string type;
         public static string price;
+        public static string date;
+        public static string name;
 
 
     }

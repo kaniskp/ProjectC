@@ -80,7 +80,7 @@ namespace ProjectC
             this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
             this.guna2DateTimePicker1.TabIndex = 45;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 7, 17, 51, 36, 230);
+            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 15, 0, 0, 0, 0);
             // 
             // label5
             // 

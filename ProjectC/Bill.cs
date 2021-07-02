@@ -11,5 +11,8 @@ namespace ProjectC
         public string menu { get; set; }
         public string type { get; set; }
         public string price { get; set; }
+        public string date { get; set; }
+        public string name { get; set; } 
+
     }
 }

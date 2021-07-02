@@ -159,6 +159,8 @@ namespace ProjectC
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            Image logo = Resource1.cof;
+            e.Graphics.DrawImage(logo, new Point(80, 40));
             e.Graphics.DrawString("ใบเสร็จ", new Font("supermarket", 20, FontStyle.Bold), Brushes.Black, new Point(400, 50));
             e.Graphics.DrawString("OH MY CUB", new Font("supermarket", 24, FontStyle.Bold), Brushes.Black, new Point(355, 90));
             e.Graphics.DrawString("พิมพ์เมื่อ " + System.DateTime.Now.ToString("dd/MM/yyyy HH : mm : ss น."), new Font("supermarket", 14, FontStyle.Regular), Brushes.Black, new PointF(525, 150));

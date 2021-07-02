@@ -134,6 +134,10 @@ namespace ProjectC
             {
                 picturemenuBox.Image = Resource1.Souffle_Cheesecake;
             }
+            if (guna2ComboBox2.Text == "Almon milk")
+            {
+
+            }
         } 
         
         private void productForm_Load(object sender, EventArgs e)

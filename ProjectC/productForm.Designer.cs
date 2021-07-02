@@ -29,13 +29,12 @@ namespace ProjectC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(productForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.Backbutton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,6 +54,7 @@ namespace ProjectC
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.Backbutton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,27 +97,6 @@ namespace ProjectC
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
             this.guna2DateTimePicker1.TabIndex = 6;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 7, 17, 51, 36, 230);
-            // 
-            // Backbutton
-            // 
-            this.Backbutton.Animated = true;
-            this.Backbutton.BackColor = System.Drawing.Color.Transparent;
-            this.Backbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Backbutton.BackgroundImage")));
-            this.Backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Backbutton.CheckedState.Parent = this.Backbutton;
-            this.Backbutton.CustomImages.Parent = this.Backbutton;
-            this.Backbutton.FillColor = System.Drawing.Color.Transparent;
-            this.Backbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Backbutton.ForeColor = System.Drawing.Color.White;
-            this.Backbutton.HoverState.Parent = this.Backbutton;
-            this.Backbutton.Location = new System.Drawing.Point(984, -5);
-            this.Backbutton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Backbutton.Name = "Backbutton";
-            this.Backbutton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Backbutton.ShadowDecoration.Parent = this.Backbutton;
-            this.Backbutton.Size = new System.Drawing.Size(59, 68);
-            this.Backbutton.TabIndex = 5;
-            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
             // 
             // guna2ComboBox2
             // 
@@ -172,11 +151,11 @@ namespace ProjectC
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Silver;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -185,11 +164,11 @@ namespace ProjectC
             this.dataGridView1.Location = new System.Drawing.Point(342, 398);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Gray;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Ti_Circular", 13.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Sienna;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(636, 151);
             this.dataGridView1.TabIndex = 24;
@@ -461,6 +440,27 @@ namespace ProjectC
             this.guna2Button8.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             this.guna2Button8.UseTransparentBackground = true;
             this.guna2Button8.Click += new System.EventHandler(this.DessButton_Click);
+            // 
+            // Backbutton
+            // 
+            this.Backbutton.Animated = true;
+            this.Backbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Backbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Backbutton.BackgroundImage")));
+            this.Backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Backbutton.CheckedState.Parent = this.Backbutton;
+            this.Backbutton.CustomImages.Parent = this.Backbutton;
+            this.Backbutton.FillColor = System.Drawing.Color.Transparent;
+            this.Backbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Backbutton.ForeColor = System.Drawing.Color.White;
+            this.Backbutton.HoverState.Parent = this.Backbutton;
+            this.Backbutton.Location = new System.Drawing.Point(984, -5);
+            this.Backbutton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Backbutton.ShadowDecoration.Parent = this.Backbutton;
+            this.Backbutton.Size = new System.Drawing.Size(59, 68);
+            this.Backbutton.TabIndex = 5;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
             // 
             // guna2Button2
             // 

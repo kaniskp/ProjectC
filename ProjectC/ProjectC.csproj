@@ -349,7 +349,12 @@
     <None Include="Resources\Coconut Cake.jpg" />
     <None Include="Resources\cookie.jpg" />
     <None Include="Resources\fruit tart.jpg" />
+    <None Include="Resources\3123.jpg" />
+    <None Include="Resources\coffees.png" />
+    <None Include="Resources\cof.png" />
     <Content Include="Resources\minerral_water.png" />
+    <None Include="Resources\oh %281%29.png" />
+    <None Include="Resources\oh %282%29.png" />
     <Content Include="Resources\oh.png" />
   </ItemGroup>
   <ItemGroup>
